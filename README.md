@@ -101,3 +101,55 @@ gh issue edit n-issue --add-assignee "github-user"
 ```sh
 gh issue close n-issue --comment "message" --reason|-r "completed | not planned"
 ```
+
+## Pull Request
+
+### Create
+
+```sh
+## Create a pull requset
+gh pr create
+
+## Define the branch ref or target of the pull request
+gh pr create --base branch
+
+## Define the branch that create the pull request this value is by default the current branch
+gh pr create --head branch
+
+## Create the pull request with the information of the first commit
+gh pr create --fill-first
+
+## Define the title of the PR
+gh pr create --title "title"
+
+## Define the body of the PR
+gh pr create --body "body"
+
+## Add labels to the PR
+gh pr create --label
+
+## Open the editor to create the title and body of the PR
+gh pr create --edito or -e
+
+## Mark the pull request as draft
+gh pr create --draft or -d
+```
+
+### Merge
+
+```sh
+## Merge the pull request with admin privileges
+gh pr merge --admin
+
+## Set Body Text For the Merge Commit
+gh pr merge --body "message"
+
+## Options to merge the pull request
+gh pr merge --squash or --rebase
+
+## Set Subject Text For the Merge Commit
+gh pr merge --subject
+
+## Delete the branch merged locally and remote
+gh pr merge --delete-branch
+```
