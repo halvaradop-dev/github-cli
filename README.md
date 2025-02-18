@@ -153,3 +153,36 @@ gh pr merge --subject
 ## Delete the branch merged locally and remote
 gh pr merge --delete-branch
 ```
+
+### Draft
+
+```sh
+## Make a pull request as a draft
+gh pr ready n-pr --undo
+
+## Make a pull request ready for review (disabled draft)
+gh pr ready n-pr
+```
+
+### Comment
+
+```sh
+## Add a body for the comment
+gh pr comment n-pr --body or -b
+
+## Edit the last comment
+gh pr comment n-pr --edit-last
+
+## Open the default editor to add the body to the comment
+gh pr comment n-pr --edito or -e
+```
+
+### Close
+
+```sh
+## Message to the closed pull request
+gh pr close n-pr --comment or -c "message" 
+
+## Delete the branch of the pull request after to be closed
+gh pr close n-pr --delete-branch or -d
+```
